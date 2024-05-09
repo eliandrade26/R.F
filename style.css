@@ -12,10 +12,12 @@ body {
     min-height: 100vh;
     background-color: #f0f2f5;
 }
+/*EFEITO DESCER ATE O ID*/
 html {
     scroll-behavior: smooth;
     transition: ease 4s;
   }
+/*ESTILIZAÇÃO DO TOPO */
 header {
     background-color: #fff;
     display: flex;
@@ -46,6 +48,7 @@ button {
 button:hover {
     color: #000;
 }
+/*ESTILIZAÇÃO DA LOGO PRINCIPAL */
 article {
     display: flex;
     align-items: center;
@@ -61,6 +64,7 @@ article {
     width: 40%;
     height: auto;
 }
+/*ESTILIZAÇÃO SOBRE A EQUIPE E SOBRE OS SERVIÇOS*/
 .container-we-are,.container-class {
     display: flex;
     background-color: #cedcdf;
@@ -81,12 +85,13 @@ h2{
 .img-equip {
     width: 100%;
 }
+/*ESTILAZAÇÃO DO TEXTO SERVIÇOS */
 .tag-service{
     width: 100%;
     font-size: 50px;
-    text-align: center;
-     
+    text-align: center;     
 }
+ /*ESTILIZAÇÃO NAS IMAGENS DE SERVIÇO */
 .img-services {
     margin-top: 20px;
     height: 420px;
@@ -94,10 +99,8 @@ h2{
     background-color: #cedcdf;
     text-align: center;
 }
-a{
-    text-decoration: none;
-    color: #000;
-}
+
+/*EFEITO SOBRE O CONTAINER DOS SERVIÇOS */
 .container-class{
     opacity: 0.5;
     font-weight: normal;
@@ -106,14 +109,7 @@ a{
     opacity: 1.8;
     transition: 0.6s;
 }
-.service-main {
-    width: 100%;
-    display: flex;
-    margin: 5% 20%;
-    justify-content: left;
-    font-size: 50px;
-}
-
+/*ESTILIZAÇÃO DO CONTAINER CARDAPIO */
 .container-drinks{
     display: flex;
     background-color: #cedcdf;
@@ -125,10 +121,7 @@ a{
     gap: 20px;
     opacity: 0.6; 
 }
-.container-drinks:hover{
-    opacity: 1.8;
-    transition: 0.6s;
-}
+/*ESTILIZAÇÃO DOS TEXTOS DO CARDAPIO */
 ul{
     list-style: none;
 }
@@ -144,6 +137,13 @@ li{
 .p{
     font-size: 20px;
 }
+/*EFEITO SUAVE NO CARDAPIO */
+.container-drinks:hover{
+    opacity: 1.8;
+    transition: 0.6s;
+}
+
+/*ESTILIZAÇÃO DO RODAPÉ*/
 footer {
     margin-top: auto;
     width: 100%;
@@ -178,15 +178,33 @@ footer {
 
 
 @media (max-width:600px){
-#btn-mobile{
-    width: 100%;
-    display: block;
-    justify-content: end;
-}
-#container-menu{
-    display: none;
-}
-#nav.active #container-menu{
-    display: flex;
-}
+
+    .header {
+        
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        background-color: #cedcdf;
+        z-index: 9999; 
+          
+    }
+    .container-menu button {
+        width: 100%;
+        text-align: right;  
+    }
+    a{
+        text-decoration: none;
+    }
+    button{
+        color: #000;
+        margin-top: 5px; 
+        display: block;
+        outline: none;
+    }
+    .container-menu button:hover{
+        background-color:#fff ;
+    }
 }
