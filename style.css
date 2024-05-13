@@ -34,7 +34,7 @@ header {
     display: none;
 }
 
-#header {
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -387,6 +387,8 @@ header input {
 
     ul {
         list-style: none;
+        display: flex;
+        flex-direction: column;
     }
 
     li {
