@@ -12,6 +12,7 @@ body {
     min-width: 90vw;
     min-height: 100vh;
     background-color: #f0f2f5;
+    
 }
 
 /*EFEITO DESCER ATE O ID*/
@@ -22,8 +23,12 @@ html {
 
 /*ESTILIZAÇÃO DO TOPO */
 header {
+    position: fixed;
+    z-index: 1;
     background-color: #fff;
     display: flex;
+    width: 100%;
+   
 }
 
 .logo {
@@ -41,8 +46,8 @@ header {
     width: 100%;
     gap: 10px;
     margin-right: 10px;
+    
 }
-
 button {
     font-size: 30px;
     border-radius: 5px;
@@ -142,8 +147,14 @@ h2 {
 }
 
 /*ESTILIZAÇÃO DOS TEXTOS DO CARDAPIO */
+.menu{
+    justify-content: baseline;
+    display: flex;
+    gap: 10px;
+}
 ul {
     list-style: none;
+    
 }
 
 li {
@@ -187,6 +198,7 @@ input {
 }
 
 @media (max-width:1920px) {
+    /*CONTAINER DE SERVIÇOS */
     .container-class {
         display: flex;
         background-color: #cedcdf;
@@ -196,17 +208,66 @@ input {
         width: 80%;
         margin: 1% auto;
         gap: 20px;
-        padding: 30px;
+        padding: 10px;
     }
 
     .img-services {
         margin-top: 20px;
-        height: 320px;
-        width: 250px;
+        height: 220px;
+        width: 190px;
         background-color: #cedcdf;
         text-align: center;
     }
+    .tag-service {
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+    }
+/*IMAGEM DO CARDAPIO DE BEBIDAS */
+.img-drinks{
+    width: 80%;
 }
+/*ESTILIZAÇÃO DO CONTAINER CARDAPIO */
+.container-drinks {
+    display: flex;
+    background-color: #cedcdf;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 1% auto;
+    gap: 10px;
+    opacity: 0.6;
+}
+
+/*ESTILIZAÇÃO DOS TEXTOS DO CARDAPIO */
+.menu{
+    justify-content: baseline;
+    display: flex;
+    gap: 10px;
+}
+ul {
+    list-style: none;
+    
+}
+
+li {
+    margin-top: 30px;
+}
+
+.h1 {
+    font-size: 60px;
+}
+
+.h2 {
+    font-size: 30px;
+}
+
+.p {
+    font-size: 20px;
+}
+}
+
 
 
 @media (max-width:600px) {
