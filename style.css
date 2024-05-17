@@ -62,7 +62,7 @@ button:hover {
     color: #000;
 }
 
-/*ESTILIZAÇÃO DA LOGO PRINCIPAL */
+/*ESTILIZAÇÃO DA LOGO PRINCIPAL*/
 article {
     display: flex;
     align-items: center;
@@ -107,14 +107,14 @@ h2 {
     width: 100%;
 }
 
-/*ESTILAZAÇÃO DO TEXTO SERVIÇOS */
+/*ESTILAZAÇÃO DO TEXTO SERVIÇOS*/
 .tag-service {
     width: 100%;
     font-size: 50px;
     text-align: center;
 }
 
-/*ESTILIZAÇÃO NAS IMAGENS DE SERVIÇO */
+/*ESTILIZAÇÃO NAS IMAGENS DE SERVIÇO*/
 .img-services {
     margin-top: 20px;
     height: 420px;
@@ -123,7 +123,7 @@ h2 {
     text-align: center;
 }
 
-/*EFEITO SOBRE O CONTAINER DOS SERVIÇOS */
+/*EFEITO SOBRE O CONTAINER DOS SERVIÇOS*/
 .container-class {
     opacity: 0.5;
     font-weight: normal;
@@ -134,7 +134,7 @@ h2 {
     transition: 0.6s;
 }
 
-/*ESTILIZAÇÃO DO CONTAINER CARDAPIO */
+/*ESTILIZAÇÃO DO CONTAINER CARDAPIO*/
 .container-drinks {
     display: flex;
     background-color: #cedcdf;
@@ -147,7 +147,7 @@ h2 {
     opacity: 0.6;
 }
 
-/*ESTILIZAÇÃO DOS TEXTOS DO CARDAPIO */
+/*ESTILIZAÇÃO DOS TEXTOS DO CARDAPIO*/
 .menu {
     justify-content: baseline;
     display: flex;
@@ -175,7 +175,7 @@ li {
     font-size: 20px;
 }
 
-/*EFEITO SUAVE NO CARDAPIO */
+/*EFEITO SUAVE NO CARDAPIO*/
 .container-drinks:hover {
     opacity: 1.8;
     transition: 0.6s;
@@ -201,7 +201,7 @@ input {
 
 @media (max-width:1920px) {
 
-    /*CONTAINER DE SERVIÇOS */
+    /*CONTAINER DE SERVIÇOS*/
     .container-class {
         display: flex;
         background-color: #cedcdf;
@@ -228,12 +228,12 @@ input {
         text-align: center;
     }
 
-    /*IMAGEM DO CARDAPIO DE BEBIDAS */
+    /*IMAGEM DO CARDAPIO DE BEBIDAS*/
     .img-drinks {
         width: 80%;
     }
 
-    /*ESTILIZAÇÃO DO CONTAINER CARDAPIO */
+    /*ESTILIZAÇÃO DO CONTAINER CARDAPIO*/
     .container-drinks {
         display: flex;
         background-color: #cedcdf;
@@ -246,7 +246,7 @@ input {
         opacity: 0.6;
     }
 
-    /*ESTILIZAÇÃO DOS TEXTOS DO CARDAPIO */
+    /*ESTILIZAÇÃO DOS TEXTOS DO CARDAPIO*/
     .menu {
         justify-content: baseline;
         display: flex;
@@ -300,29 +300,28 @@ input {
         width: 100%;
         top: 10px;
         z-index: 1;
-
         -webkit-user-select: none;
         user-select: none;
         margin-right: 100px;
+        right: 50%;/* FAZ COM QUE O MENU FIQUE A DIREITA */
     }
 
-    /* ESTILIZAÇÃO DO CHECKBOX INVISIVEL*/
+    /*ESTILIZAÇÃO DO CHECKBOX INVISIVEL*/
     input {
         display: flex;
         width: 100%;
         height: 32px;
         position: absolute;
         cursor: pointer;
-        margin-left: 78%;
+        margin-left: 150%; /* LOCAL DO CHECKBOX*/
         top: -6px;
-        opacity: 0; /* MANTEM O ELEMENTO INVISIVEL*/
-        z-index: 2;/* FAZ COM QUE O ELEMENTO FIQUE ACIMA DE OUTRO */
+        opacity: 0; /*MANTEM O ELEMENTO INVISIVEL*/
+        z-index: 2;/*FAZ COM QUE O ELEMENTO FIQUE ACIMA DE OUTRO*/
     }
 
-    /* INPUT E ANIMAÇÃO */
+    /* ANIMAÇÃO*/
     span {
-        margin-left: 120%;
-        /* MOVIMENTANDO A IMAGEM DE MENU PARA ESQUERDA*/
+        margin-left: 195%; /*MOVIMENTANDO A IMAGEM DE MENU PARA ESQUERDA*/
         display: flex;
         width: 30px;
         height: 2px;
@@ -332,25 +331,25 @@ input {
         border-radius: 3px;
         z-index: 1;
         transform-origin: 5px 0px;
-        /* MOVIMENTO DAS LINHAS DE MENU FORMANDO O X */
-        background: cubic-bezier(0.10, 0.1, 0.01, 0.0);
+        background: cubic-bezier(0.10, 0.1, 0.01, 0.0); /*MOVIMENTO DAS LINHAS DE MENU FORMANDO O X*/
         transition: 0.5s;
         opacity: 0.55s ease;
     }
 
-    /*ANIMAÇÕES DA TECLA ABRIR E FECHAR MENU */
-    .container-menu span:first-child {
+    /*ANIMAÇÕES DA TECLA ABRIR E FECHAR MENU*/
+    .container-menu input:first-child {
         transform-origin: 0% 0%;
     }
 
-    .container-menu span:nth-last-child(2) {
+    .container-menu input:nth-last-child(2) {
         transform-origin: 0% 0%;
+        
     }
 
     .container-menu input:checked~span {
         opacity: 1;
         transform: rotate(45deg) translate(-3px, -1px);
-        
+       
     }
 
     .container-menu input:checked~span:nth-last-child(3) {
@@ -371,25 +370,19 @@ input {
         align-items: center;
         padding-top: 60px;
         background-color: #F5F6FA;
-        -webkit-font-smoothing: antialiased;
-        transform-origin: right, top;
-        transform: translate(-90%, 0%);
-        /* APLICANDO MOVIMENTO DA DIREITA PARA A ESQUERDAR MENU*/
-        transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-
+        -webkit-font-smoothing: antialiased;    
+        /*APLICANDO MOVIMENTO DA DIREITA PARA A ESQUERDAR MENU*/
+        transform: translateX(120%); /* ADICIONEI ESTA PROPRIEDADE DEIXANDO POSITIVO MOVIMENTA PARA ESQUERDA*/
     }
 
-    /*ESTA PARTE CLICAVA UM PADDING ASSIM QUE O MENU APARECIA E TINHA UM DELAY DE 2S */
+    /*ESTA PARTE CLICAVA UM PADDING ASSIM QUE O MENU APARECIA E TINHA UM DELAY DE 2S*/
     .menu a {
         padding: 0px 0;
-        transition-delay: 0s;
-        
+        transition-delay: 0s;  
     }
-
     .container-menu input:checked~ul {
         transform: none;
     }
-
     .container-we-are,
     .container-class {
         display: flex;
@@ -403,39 +396,30 @@ input {
         gap: 20px;
         padding: 30px;
     }
-
     h1 {
         font-size: 20px;
     }
-
     h2 {
         font-weight: normal;
     }
-
     .img-equip {
         width: 100%;
     }
-
     .img-services {
         margin-top: 0px;
         height: 0%;
         width: 70%;
         background-color: #cedcdf;
         text-align: center;
-
     }
-
     .container-class,
     .container-drinks {
         opacity: 1;
         font-weight: normal;
     }
-
     .tag-service {
         font-size: 30px;
-
     }
-
     .container-drinks {
         display: flex;
         background-color: #cedcdf;
@@ -445,32 +429,24 @@ input {
         width: 80%;
         height: 80%;
         margin: 0% auto;
-
-
     }
-
     .img-drinks {
         height: 450px;
     }
-
     ul {
         list-style: none;
         display: flex;
         flex-direction: column;
     }
-
     li {
         margin-top: 20px;
     }
-
     .h1 {
         font-size: 20px;
     }
-
     .h2 {
         font-size: 15px;
     }
-
     .p {
         font-size: 10px;
     }
