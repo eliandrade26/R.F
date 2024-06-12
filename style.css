@@ -207,7 +207,7 @@ input {
     /*CONTAINER DE SERVIÇOS*/
     .container-class {
         display: flex;
-        background-color: transparent;
+        background: radial-gradient(#e97a42,#ff9215) ;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -215,8 +215,11 @@ input {
         margin: 1% auto;
         gap: 20px;
         padding: 10px;
+        opacity: 0.6;
     }
-
+.container-class:hover{
+    opacity: 1;
+}
     .img-services {
         margin-top: 20px;
         height: 320px;
